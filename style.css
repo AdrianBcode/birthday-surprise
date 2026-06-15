@@ -1,0 +1,85 @@
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #2b1055, #111);
+  font-family: Arial, sans-serif;
+  color: white;
+  user-select: none;
+}
+
+/* ── Intro header ───────────────────────────────────────────────────────────── */
+
+#intro {
+  text-align: center;
+  padding-top: 30px;
+  position: relative;
+  z-index: 5;
+}
+
+#intro h1 {
+  margin: 0;
+  font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+#progress {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* ── Birthday banner ────────────────────────────────────────────────────────── */
+
+#birthdayBanner {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+#birthdayBanner h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 7vw, 3rem);
+}
+
+#birthdayBanner p {
+  margin-top: 10px;
+  font-size: clamp(0.95rem, 3vw, 1.2rem);
+}
+
+/* ── Chase button ───────────────────────────────────────────────────────────── */
+
+#spotifyButton {
+  position: absolute;
+  padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 28px);
+  border: none;
+  border-radius: 999px;
+  background: #1db954;
+  color: white;
+  font-size: clamp(15px, 4vw, 18px);
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 4px 20px rgba(29, 185, 84, 0.45);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  will-change: transform;
+  touch-action: manipulation;
+}
+
+#spotifyButton:hover      { background: #1ed760; box-shadow: 0 6px 28px rgba(29, 185, 84, 0.65); }
+#spotifyButton:active     { background: #17a349; }
+#spotifyButton:focus-visible { outline: 3px solid #1db954; outline-offset: 4px; }
+
+/* ── Confetti pieces ────────────────────────────────────────────────────────── */
+
+.confetti {
+  position: fixed;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  z-index: 999;
+  pointer-events: none;
+}
